@@ -131,15 +131,63 @@ function HeroSection() {
 
 // Training Section
 function TrainingSection() {
-  const trainingTypes = [
-    { icon: "🏊", name: "Basen - ćwiczenia", time: "41m", distance: "2.2 km" },
-    { icon: "🏃", name: "Bieg Tempo", time: "56m", distance: "12 km" },
-    { icon: "🏊", name: "Basen wytrzymałość", time: "56m", distance: "3 km" },
-    { icon: "🚴", name: "Rower / trenazer", time: "1h30m", distance: "" },
-    { icon: "🏃", name: "Bieg Interwał", time: "1h8m", distance: "14 km" },
-    { icon: "💪", name: "Trening siłowy", time: "1h0m", distance: "" },
-    { icon: "🏃", name: "Wybieganie teren", time: "1h30m", distance: "" },
-    { icon: "🚴", name: "Rower szosa", time: "3h30m", distance: "" },
+  const trainingDays = [
+    { 
+      day: "Pon",
+      icon: "🏊", 
+      activities: [
+        { time: "41m", distance: "2.2 km", load: 37, name: "Basen - ćwiczenia", color: "bg-teal-500" }
+      ]
+    },
+    { 
+      day: "Wt",
+      icon: "💪", 
+      activities: [
+        { time: "1h0m", distance: "", load: 60, name: "Trening siłowy", color: "bg-emerald-500" }
+      ]
+    },
+    { 
+      day: "Śr",
+      icon: "🏊", 
+      activities: [
+        { time: "56m", distance: "3 km", load: 54, name: "Basen wytrzymałość", color: "bg-teal-500" }
+      ]
+    },
+    { 
+      day: "Czw",
+      icon: "🏃", 
+      activities: [
+        { time: "1h8m", distance: "14 km", load: 81, name: "Bieg Interwał", color: "bg-yellow-500" }
+      ]
+    },
+    { 
+      day: "Pt",
+      icon: "💪", 
+      activities: [
+        { time: "1h0m", distance: "", load: 66, name: "Wybieganie teren", color: "bg-emerald-500" }
+      ]
+    },
+    { 
+      day: "Sob",
+      icon: "🚴", 
+      activities: [
+        { time: "1h30m", distance: "", load: 85, name: "Rower / trenazer", color: "bg-orange-500" }
+      ]
+    },
+    { 
+      day: "Ndz",
+      icon: "🏊", 
+      activities: [
+        { time: "56m", distance: "3 km", load: 54, name: "Basen wytrzymałość", color: "bg-teal-500" }
+      ]
+    },
+    { 
+      day: "Pon",
+      icon: "🚴", 
+      activities: [
+        { time: "3h30m", distance: "", load: 136, name: "Rower szosa", color: "bg-teal-600" }
+      ]
+    },
   ];
 
   return (
@@ -206,14 +254,27 @@ function TrainingSection() {
             <p className="text-3xl font-bold text-center text-neutral-900">Proste!</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {trainingTypes.map((training, index) => (
-              <div key={index} className="card rounded-lg p-4 text-center">
-                <div className="text-2xl mb-2">{training.icon}</div>
-                <div className="text-xs text-neutral-600 mb-1">
-                  {training.time} {training.distance && `• ${training.distance}`}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {trainingDays.map((day, index) => (
+              <div key={index} className="card rounded-xl p-4 hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">{day.day}</div>
+                  <div className="text-3xl">{day.icon}</div>
                 </div>
-                <div className="text-xs text-neutral-900 mt-2">{training.name}</div>
+                {day.activities.map((activity, actIndex) => (
+                  <div key={actIndex} className={actIndex > 0 ? "mt-3 pt-3 border-t border-neutral-200" : ""}>
+                    <div className="text-sm font-medium text-neutral-900 mb-2">
+                      {activity.time} {activity.distance && `• ${activity.distance}`}
+                    </div>
+                    <div className="h-2 bg-neutral-200 rounded-full overflow-hidden mb-2">
+                      <div 
+                        className={`h-full ${activity.color}`}
+                        style={{ width: `${Math.min(activity.load, 100)}%` }}
+                      />
+                    </div>
+                    <div className="text-xs text-neutral-900 font-medium">{activity.name}</div>
+                  </div>
+                ))}
               </div>
             ))}
           </div>

@@ -28,38 +28,38 @@ const YouTubeIcon = () => (
 // Navigation
 function Navigation() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/90 backdrop-blur-sm border-b border-neutral-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           <Link href="#" className="flex flex-col">
-            <span className="text-2xl tracking-tight leading-none text-white">Bartosz</span>
-            <span className="text-2xl font-black tracking-tight leading-none text-white">Grubka</span>
+            <span className="text-2xl tracking-tight leading-none text-neutral-900">Bartosz</span>
+            <span className="text-2xl font-black tracking-tight leading-none text-neutral-900">Grubka</span>
           </Link>
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#trening" className="text-neutral-400 hover:text-white transition-colors">
+            <Link href="#trening" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               Trening
             </Link>
-            <Link href="#o-mnie" className="text-neutral-400 hover:text-white transition-colors">
+            <Link href="#o-mnie" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               O mnie
             </Link>
-            <Link href="#wyniki" className="text-neutral-400 hover:text-white transition-colors">
+            <Link href="#wyniki" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               Wyniki
             </Link>
-            <Link href="#kontakt" className="text-neutral-400 hover:text-white transition-colors">
+            <Link href="#kontakt" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               Kontakt
             </Link>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="https://www.strava.com" target="_blank" className="text-orange-600 hover:text-orange-500 transition-colors">
+            <Link href="https://www.strava.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               <StravaIcon />
             </Link>
-            <Link href="https://www.instagram.com" target="_blank" className="text-neutral-400 hover:text-white transition-colors">
+            <Link href="https://www.instagram.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               <InstagramIcon />
             </Link>
-            <Link href="https://www.facebook.com" target="_blank" className="text-neutral-400 hover:text-white transition-colors">
+            <Link href="https://www.facebook.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               <FacebookIcon />
             </Link>
-            <Link href="https://www.youtube.com" target="_blank" className="text-neutral-400 hover:text-white transition-colors">
+            <Link href="https://www.youtube.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               <YouTubeIcon />
             </Link>
           </div>
@@ -91,30 +91,30 @@ function HeroSection() {
             className="w-full h-full object-cover"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent" />
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-4xl">
           {/* 3D Perspective Text */}
           <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black uppercase leading-[0.9] mb-8 tracking-tight [perspective:800px]">
-            <span className="block text-orange-400 [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">Trenuj mądrze</span>
-            <span className="block text-orange-400 [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">i po cichu,</span>
-            <span className="block text-white mt-2 [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">a efekty niech</span>
-            <span className="block text-white [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">robią hałas</span>
+            <span className="block text-white [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">Trenuj mądrze</span>
+            <span className="block text-white [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">i po cichu,</span>
+            <span className="block text-neutral-900 mt-2 [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">a efekty niech</span>
+            <span className="block text-neutral-900 [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">robią hałas</span>
           </h1>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-12">
             <Link
               href="#kontakt"
-              className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-400 text-neutral-950 font-bold rounded-lg transition-colors uppercase tracking-wide"
+              className="inline-flex items-center justify-center px-8 py-4 bg-neutral-900 hover:bg-neutral-700 text-white font-bold rounded-lg transition-colors uppercase tracking-wide"
             >
               Rozpocznij trening
             </Link>
             <Link
               href="#o-mnie"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white hover:bg-white hover:text-neutral-950 text-white font-bold rounded-lg transition-colors uppercase tracking-wide"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-neutral-900 hover:bg-neutral-900 hover:text-white text-neutral-900 font-bold rounded-lg transition-colors uppercase tracking-wide"
             >
               Poznaj mnie
             </Link>
@@ -124,7 +124,7 @@ function HeroSection() {
       
       {/* Side text like in reference */}
       <div className="absolute left-4 bottom-1/3 -rotate-90 origin-left hidden lg:block">
-        <span className="text-xs tracking-[0.3em] text-neutral-400 uppercase">Bartosz Grubka</span>
+        <span className="text-xs tracking-[0.3em] text-neutral-600 uppercase">Bartosz Grubka</span>
       </div>
     </section>
   );
@@ -144,9 +144,9 @@ function TrainingSection() {
   ];
 
   const getLoadColor = (load: number) => {
-    if (load > 100) return "bg-orange-500";
-    if (load > 70) return "bg-amber-500";
-    return "bg-green-500";
+    if (load > 100) return "bg-neutral-800";
+    if (load > 70) return "bg-neutral-600";
+    return "bg-neutral-400";
   };
 
   return (
@@ -156,7 +156,7 @@ function TrainingSection() {
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="text-gradient">Trening</span>
           </h2>
-          <p className="text-xl text-orange-400 italic max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-600 italic max-w-2xl mx-auto">
             Dostajesz: plan treningowy na:<br />
             - 14 dni,<br />
             - miesiąc,<br />
@@ -167,67 +167,67 @@ function TrainingSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="space-y-8">
             <div className="card rounded-xl p-8">
-              <h3 className="text-xl font-semibold text-orange-400 mb-4">W zależności od Twoich potrzeb umawiamy się na:</h3>
-              <ul className="space-y-3 text-neutral-400">
+              <h3 className="text-xl font-semibold text-neutral-900 mb-4">W zależności od Twoich potrzeb umawiamy się na:</h3>
+              <ul className="space-y-3 text-neutral-600">
                 <li className="flex items-center gap-3">
-                  <span className="text-orange-500">•</span>
+                  <span className="text-neutral-900">•</span>
                   konsultację treningową
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-orange-500">•</span>
+                  <span className="text-neutral-900">•</span>
                   rozpisany plan treningowy
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-orange-500">•</span>
+                  <span className="text-neutral-900">•</span>
                   plan treningowy i jego monitorowanie
                 </li>
               </ul>
             </div>
 
             <div className="card rounded-xl p-8">
-              <h3 className="text-xl font-semibold text-orange-400 mb-4">Plan:</h3>
-              <ul className="space-y-3 text-neutral-400">
+              <h3 className="text-xl font-semibold text-neutral-900 mb-4">Plan:</h3>
+              <ul className="space-y-3 text-neutral-600">
                 <li className="flex items-start gap-3">
-                  <span className="text-orange-500 mt-1">•</span>
+                  <span className="text-neutral-900 mt-1">•</span>
                   <span>uwzględnia Twoje doświadczenie</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-orange-500 mt-1">•</span>
+                  <span className="text-neutral-900 mt-1">•</span>
                   <span>oparty jest na tym do czego się przygotowujesz, lub nad czym chcesz pracować</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-orange-500 mt-1">•</span>
+                  <span className="text-neutral-900 mt-1">•</span>
                   <span>masz personalny dostęp do Twojego planu treningowego</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-orange-500 mt-1">•</span>
+                  <span className="text-neutral-900 mt-1">•</span>
                   <span>widzisz co masz zaplanowane wraz z komentarzem</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-orange-500 mt-1">•</span>
+                  <span className="text-neutral-900 mt-1">•</span>
                   <span>Ja widzę co zrobiłeś/aś (możesz również komentować swoje odczucia po) i na tej podstawie mogę reagować na Twój dalszy rozwój.</span>
                 </li>
               </ul>
             </div>
 
-            <p className="text-3xl font-bold text-center text-orange-500">Proste!</p>
+            <p className="text-3xl font-bold text-center text-neutral-900">Proste!</p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {trainingTypes.map((training, index) => (
               <div key={index} className="card rounded-lg p-4 text-center">
                 <div className="text-2xl mb-2">{training.icon}</div>
-                <div className="text-xs text-orange-400 mb-1">
+                <div className="text-xs text-neutral-600 mb-1">
                   {training.time} {training.distance && `• ${training.distance}`}
                 </div>
-                <div className="text-sm text-neutral-400 mb-2">Obciążenie {training.load}</div>
-                <div className="h-2 bg-neutral-900 rounded-full overflow-hidden">
+                <div className="text-sm text-neutral-600 mb-2">Obciążenie {training.load}</div>
+                <div className="h-2 bg-neutral-200 rounded-full overflow-hidden">
                   <div 
                     className={`h-full rounded-full ${getLoadColor(training.load)}`}
                     style={{ width: `${Math.min(training.load, 100)}%` }}
                   />
                 </div>
-                <div className="text-xs text-neutral-100 mt-2">{training.name}</div>
+                <div className="text-xs text-neutral-900 mt-2">{training.name}</div>
               </div>
             ))}
           </div>
@@ -250,27 +250,27 @@ function AboutSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-center lg:text-left">
-            <p className="text-lg text-neutral-400 italic">
+            <p className="text-lg text-neutral-600 italic">
               Od ponad 20 lat związany ze sportem.
             </p>
-            <p className="text-lg text-neutral-400 italic">
+            <p className="text-lg text-neutral-600 italic">
               Były kolarz szosowy w latach 2004-2010.
             </p>
-            <p className="text-lg text-neutral-400 italic">
+            <p className="text-lg text-neutral-600 italic">
               Od 2020r uprawia amatorsko triathlon, szczególnie w wersji XTRI.
             </p>
-            <p className="text-lg text-neutral-100 font-semibold">
+            <p className="text-lg text-neutral-900 font-semibold">
               Zwycięzca m.in. Diablak Beskid Extreme Triathlon 2022, Tatraman 2023, czy Osiek Triathlon 2024.
             </p>
-            <p className="text-lg text-neutral-400 italic">
+            <p className="text-lg text-neutral-600 italic">
               Uczestnik zawodów z cyklu XTRI World Tour Janosik 2023 (Słowacja),
               Mistrzostw Świata XTRI Norseman 2024 (Norwegia), czy Swissman 2025 (Szwajcaria).
             </p>
-            <p className="text-lg text-orange-400 font-semibold">
+            <p className="text-lg text-neutral-900 font-semibold">
               W 2024r reprezentant Polski w Mistrzostwach Świata AG
               w triathlonie na dystansie olimpijskim w Torremolinos (Hiszpania).
             </p>
-            <p className="text-base text-neutral-400 mt-8">
+            <p className="text-base text-neutral-600 mt-8">
               Z zawodu inżynier jakości, po godzinach gitarzysta samouk, fan dobrej kawy i muzyki.
             </p>
           </div>
@@ -280,7 +280,7 @@ function AboutSection() {
               <img 
                 src="/photos/image_o_mnie.jpg" 
                 alt="Bartosz Grubka cycling" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover grayscale"
               />
             </div>
           </div>
@@ -329,21 +329,21 @@ function ResultsSection() {
             {results.map((result, index) => (
               <div 
                 key={index} 
-                className="flex items-center gap-3 py-2 px-4 rounded-lg hover:bg-neutral-800 transition-colors"
+                className="flex items-center gap-3 py-2 px-4 rounded-lg hover:bg-neutral-100 transition-colors"
               >
                 <span className="text-xl">{result.flag}</span>
-                <span className="text-neutral-100 flex-1">{result.event}</span>
+                <span className="text-neutral-900 flex-1">{result.event}</span>
                 {result.position && (
-                  <span className="text-orange-500 font-semibold">{result.position}</span>
+                  <span className="text-neutral-700 font-semibold">{result.position}</span>
                 )}
               </div>
             ))}
             
-            <div className="mt-8 pt-8 border-t border-neutral-800">
+            <div className="mt-8 pt-8 border-t border-neutral-200">
               <Link 
                 href="https://www.strava.com" 
                 target="_blank"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-neutral-900 hover:bg-neutral-700 text-white font-semibold rounded-lg transition-colors"
               >
                 <StravaIcon />
                 Follow me on STRAVA
@@ -356,7 +356,7 @@ function ResultsSection() {
               <img 
                 src="/photos/image_wyniki.jpg" 
                 alt="Bartosz Grubka race results celebration" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover grayscale"
               />
             </div>
           </div>
@@ -380,32 +380,32 @@ function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-8">
             <div>
-              <p className="text-xl text-neutral-400 italic mb-6">
+              <p className="text-xl text-neutral-600 italic mb-6">
                 Jeśli chciałbyś rozwinąć swój potencjał w:
               </p>
               <ul className="space-y-3 text-lg">
-                <li className="text-neutral-100 font-semibold">Kolarstwie szosowym</li>
-                <li className="text-neutral-100 font-semibold">Biegach górskich i ulicznych</li>
-                <li className="text-neutral-100 font-semibold">Triathlonie</li>
+                <li className="text-neutral-900 font-semibold">Kolarstwie szosowym</li>
+                <li className="text-neutral-900 font-semibold">Biegach górskich i ulicznych</li>
+                <li className="text-neutral-900 font-semibold">Triathlonie</li>
               </ul>
             </div>
 
-            <p className="text-2xl text-orange-400 font-semibold">
+            <p className="text-2xl text-neutral-900 font-semibold">
               Zapraszam do kontaktu
             </p>
 
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-neutral-100">Bartosz Grubka</h3>
+              <h3 className="text-2xl font-bold text-neutral-900">Bartosz Grubka</h3>
               <div className="space-y-2">
-                <p className="text-neutral-400">
+                <p className="text-neutral-600">
                   E-mail:{" "}
-                  <a href="mailto:bartosz.grubka@gmail.com" className="text-orange-500 hover:text-orange-400 transition-colors">
+                  <a href="mailto:bartosz.grubka@gmail.com" className="text-neutral-900 hover:text-neutral-700 transition-colors">
                     john.doe@gmail.com
                   </a>
                 </p>
-                <p className="text-neutral-400">
+                <p className="text-neutral-600">
                   Tel.{" "}
-                  <a href="tel:+48694839753" className="text-orange-500 hover:text-orange-400 transition-colors">
+                  <a href="tel:+48694839753" className="text-neutral-900 hover:text-neutral-700 transition-colors">
                     666-777-888
                   </a>
                 </p>
@@ -416,28 +416,28 @@ function ContactSection() {
               <Link 
                 href="https://www.strava.com" 
                 target="_blank"
-                className="p-3 bg-neutral-800 hover:bg-orange-600 rounded-lg transition-colors text-orange-600 hover:text-white"
+                className="p-3 bg-neutral-200 hover:bg-neutral-300 rounded-lg transition-colors text-neutral-700 hover:text-neutral-900"
               >
                 <StravaIcon />
               </Link>
               <Link 
                 href="https://www.instagram.com" 
                 target="_blank"
-                className="p-3 bg-neutral-800 hover:bg-pink-600 rounded-lg transition-colors text-neutral-400 hover:text-white"
+                className="p-3 bg-neutral-200 hover:bg-neutral-300 rounded-lg transition-colors text-neutral-700 hover:text-neutral-900"
               >
                 <InstagramIcon />
               </Link>
               <Link 
                 href="https://www.facebook.com" 
                 target="_blank"
-                className="p-3 bg-neutral-800 hover:bg-blue-600 rounded-lg transition-colors text-neutral-400 hover:text-white"
+                className="p-3 bg-neutral-200 hover:bg-neutral-300 rounded-lg transition-colors text-neutral-700 hover:text-neutral-900"
               >
                 <FacebookIcon />
               </Link>
               <Link 
                 href="https://www.youtube.com" 
                 target="_blank"
-                className="p-3 bg-neutral-800 hover:bg-red-600 rounded-lg transition-colors text-neutral-400 hover:text-white"
+                className="p-3 bg-neutral-200 hover:bg-neutral-300 rounded-lg transition-colors text-neutral-700 hover:text-neutral-900"
               >
                 <YouTubeIcon />
               </Link>
@@ -449,7 +449,7 @@ function ContactSection() {
               <img 
                 src="/photos/image_kontakt.jpeg" 
                 alt="Bartosz Grubka triathlon" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover grayscale"
               />
             </div>
           </div>
@@ -462,23 +462,23 @@ function ContactSection() {
 // Footer
 function Footer() {
   return (
-    <footer className="py-8 section-dotted border-t border-neutral-800">
+    <footer className="py-8 section-dotted border-t border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-neutral-400 text-sm">
+          <p className="text-neutral-600 text-sm">
             © {new Date().getFullYear()} Bartosz Grubka. Wszystkie prawa zastrzeżone.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="https://www.strava.com" target="_blank" className="text-neutral-400 hover:text-orange-600 transition-colors">
+            <Link href="https://www.strava.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               <StravaIcon />
             </Link>
-            <Link href="https://www.instagram.com" target="_blank" className="text-neutral-400 hover:text-white transition-colors">
+            <Link href="https://www.instagram.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               <InstagramIcon />
             </Link>
-            <Link href="https://www.facebook.com" target="_blank" className="text-neutral-400 hover:text-white transition-colors">
+            <Link href="https://www.facebook.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               <FacebookIcon />
             </Link>
-            <Link href="https://www.youtube.com" target="_blank" className="text-neutral-400 hover:text-white transition-colors">
+            <Link href="https://www.youtube.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               <YouTubeIcon />
             </Link>
           </div>

@@ -10,45 +10,45 @@ html {
 }
 
 body {
-  @apply bg-neutral-950 text-neutral-100;
+  @apply bg-white text-neutral-900;
 }
 
 .hero-gradient {
-  @apply bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-800;
+  @apply bg-gradient-to-br from-neutral-50 via-neutral-100 to-neutral-200;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
 .section-gradient {
-  @apply bg-gradient-to-b from-neutral-900 to-neutral-950;
+  @apply bg-gradient-to-b from-neutral-100 to-neutral-50;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
 .section-dotted {
-  @apply bg-neutral-950;
+  @apply bg-white;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
 .text-gradient {
-  @apply bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent;
+  @apply text-neutral-900;
 }
 
 .card {
-  @apply bg-neutral-800 border border-neutral-700 transition-all duration-300;
+  @apply bg-neutral-50 border border-neutral-300 transition-all duration-300;
 }
 
 .card:hover {
-  @apply border-orange-500 -translate-y-0.5;
+  @apply border-neutral-400 -translate-y-0.5;
 }
 
 .image-placeholder {
-  @apply bg-gradient-to-br from-neutral-800 to-neutral-700 flex items-center justify-center text-neutral-400 text-sm;
+  @apply bg-gradient-to-br from-neutral-200 to-neutral-300 flex items-center justify-center text-neutral-600 text-sm;
 }

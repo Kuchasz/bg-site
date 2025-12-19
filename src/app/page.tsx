@@ -197,12 +197,19 @@ function TrainingSection() {
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="text-gradient">Trening</span>
           </h2>
-          <p className="text-xl text-neutral-600 italic max-w-2xl mx-auto">
-            Dostajesz: plan treningowy na:<br />
-            - 14 dni,<br />
-            - miesiąc,<br />
-            ...Ty wybierasz
-          </p>
+          <div className="max-w-2xl mx-auto card rounded-xl p-8">
+            <p className="text-2xl font-bold mb-4 text-neutral-900">
+              Dostajesz: plan treningowy na:
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-xl font-semibold">
+              <span className="px-6 py-2 border-2 border-neutral-900 rounded-lg text-neutral-900 hover:bg-neutral-900 hover:text-white transition-colors cursor-pointer">14 dni</span>
+              <span className="text-neutral-600 font-normal">lub</span>
+              <span className="px-6 py-2 border-2 border-neutral-900 rounded-lg text-neutral-900 hover:bg-neutral-900 hover:text-white transition-colors cursor-pointer">miesiąc</span>
+            </div>
+            <p className="text-xl font-light mt-4 italic text-neutral-600">
+              ...Ty wybierasz
+            </p>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">

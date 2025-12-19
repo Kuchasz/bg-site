@@ -399,13 +399,13 @@ function ContactSection() {
               <div className="space-y-2">
                 <p className="text-neutral-600">
                   E-mail:{" "}
-                  <a href="mailto:bartosz.grubka@gmail.com" className="text-neutral-900 hover:text-neutral-700 transition-colors">
+                  <a href="mailto:john.doe@gmail.com" className="text-neutral-900 hover:text-neutral-700 transition-colors">
                     john.doe@gmail.com
                   </a>
                 </p>
                 <p className="text-neutral-600">
                   Tel.{" "}
-                  <a href="tel:+48694839753" className="text-neutral-900 hover:text-neutral-700 transition-colors">
+                  <a href="tel:+48666777888" className="text-neutral-900 hover:text-neutral-700 transition-colors">
                     666-777-888
                   </a>
                 </p>

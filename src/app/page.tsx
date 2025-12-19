@@ -50,7 +50,7 @@ function Navigation() {
             </Link>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="https://www.strava.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
+            <Link href="https://www.strava.com/athletes/17131294" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               <StravaIcon />
             </Link>
             <Link href="https://www.instagram.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
@@ -397,7 +397,7 @@ function ResultsSection() {
             
             <div className="mt-8 pt-8 border-t border-neutral-200">
               <Link 
-                href="https://www.strava.com" 
+                href="https://www.strava.com/athletes/17131294" 
                 target="_blank"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-neutral-900 hover:bg-neutral-700 text-white font-semibold rounded-lg transition-colors"
               >
@@ -470,7 +470,7 @@ function ContactSection() {
 
             <div className="flex justify-center lg:justify-start gap-4 pt-4">
               <Link 
-                href="https://www.strava.com" 
+                href="https://www.strava.com/athletes/17131294" 
                 target="_blank"
                 className="p-3 bg-neutral-200 hover:bg-neutral-300 rounded-lg transition-colors text-neutral-700 hover:text-neutral-900"
               >
@@ -525,7 +525,7 @@ function Footer() {
             © {new Date().getFullYear()} Bartosz Grubka. Wszystkie prawa zastrzeżone.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="https://www.strava.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
+            <Link href="https://www.strava.com/athletes/17131294" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               <StravaIcon />
             </Link>
             <Link href="https://www.instagram.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">

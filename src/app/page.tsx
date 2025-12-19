@@ -304,23 +304,23 @@ function AboutSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-center lg:text-left">
-            <p className="text-lg text-neutral-600 italic">
+            <p className="text-lg text-neutral-700">
               Od ponad 20 lat związany ze sportem.
             </p>
-            <p className="text-lg text-neutral-600 italic">
+            <p className="text-lg text-neutral-700">
               Były kolarz szosowy w latach 2004-2010.
             </p>
-            <p className="text-lg text-neutral-600 italic">
+            <p className="text-lg text-neutral-700">
               Od 2020r uprawia amatorsko triathlon, szczególnie w wersji XTRI.
             </p>
-            <p className="text-lg text-neutral-900 font-semibold">
+            <p className="text-lg text-neutral-700">
               Zwycięzca m.in. Diablak Beskid Extreme Triathlon 2022, Tatraman 2023, czy Osiek Triathlon 2024.
             </p>
-            <p className="text-lg text-neutral-600 italic">
+            <p className="text-lg text-neutral-900 font-semibold">
               Uczestnik zawodów z cyklu XTRI World Tour Janosik 2023 (Słowacja),
               Mistrzostw Świata XTRI Norseman 2024 (Norwegia), czy Swissman 2025 (Szwajcaria).
             </p>
-            <p className="text-lg text-neutral-900 font-semibold">
+            <p className="text-lg text-neutral-700">
               W 2024r reprezentant Polski w Mistrzostwach Świata AG
               w triathlonie na dystansie olimpijskim w Torremolinos (Hiszpania).
             </p>

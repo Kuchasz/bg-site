@@ -81,13 +81,13 @@ function HeroSection() {
           muted 
           playsInline
           className="w-full h-full object-cover"
-          poster="/photos/Gotthard Pass.jpg"
+          poster="/photos/diablak_movie_placeholder.jpg"
         >
           <source src="/videos/hero_vid.webm" type="video/webm" />
           {/* Fallback image */}
           <img 
-            src="/photos/Gotthard Pass.jpg" 
-            alt="Gotthard Pass cycling" 
+            src="/photos/diablak_movie_placeholder.jpg" 
+            alt="Diablak extreme triathlon" 
             className="w-full h-full object-cover"
           />
         </video>
@@ -97,12 +97,11 @@ function HeroSection() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-4xl">
-          {/* 3D Perspective Text */}
-          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black uppercase leading-[0.9] mb-8 tracking-tight [perspective:800px]">
-            <span className="block text-white [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">Trenuj mądrze</span>
-            <span className="block text-white [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">i po cichu,</span>
-            <span className="block text-neutral-900 mt-2 [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">a efekty niech</span>
-            <span className="block text-neutral-900 [transform:rotateY(18deg)] [transform-style:preserve-3d] origin-left">robią hałas</span>
+          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black uppercase leading-[0.9] mb-8 tracking-tight">
+            <span className="block text-white">Trenuj mądrze</span>
+            <span className="block text-white">i po cichu,</span>
+            <span className="block text-neutral-900 mt-2">a efekty niech</span>
+            <span className="block text-neutral-900">robią hałas</span>
           </h1>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-12">
@@ -133,21 +132,15 @@ function HeroSection() {
 // Training Section
 function TrainingSection() {
   const trainingTypes = [
-    { icon: "🏊", name: "Basen - ćwiczenia", time: "41m", distance: "2.2 km", load: 37 },
-    { icon: "🏃", name: "Bieg Tempo", time: "56m", distance: "12 km", load: 60 },
-    { icon: "🏊", name: "Basen wytrzymałość", time: "56m", distance: "3 km", load: 54 },
-    { icon: "🚴", name: "Rower / trenazer", time: "1h30m", distance: "", load: 85 },
-    { icon: "🏃", name: "Bieg Interwał", time: "1h8m", distance: "14 km", load: 81 },
-    { icon: "💪", name: "Trening siłowy", time: "1h0m", distance: "", load: 45 },
-    { icon: "🏃", name: "Wybieganie teren", time: "1h30m", distance: "", load: 66 },
-    { icon: "🚴", name: "Rower szosa", time: "3h30m", distance: "", load: 136 },
+    { icon: "🏊", name: "Basen - ćwiczenia", time: "41m", distance: "2.2 km" },
+    { icon: "🏃", name: "Bieg Tempo", time: "56m", distance: "12 km" },
+    { icon: "🏊", name: "Basen wytrzymałość", time: "56m", distance: "3 km" },
+    { icon: "🚴", name: "Rower / trenazer", time: "1h30m", distance: "" },
+    { icon: "🏃", name: "Bieg Interwał", time: "1h8m", distance: "14 km" },
+    { icon: "💪", name: "Trening siłowy", time: "1h0m", distance: "" },
+    { icon: "🏃", name: "Wybieganie teren", time: "1h30m", distance: "" },
+    { icon: "🚴", name: "Rower szosa", time: "3h30m", distance: "" },
   ];
-
-  const getLoadColor = (load: number) => {
-    if (load > 100) return "bg-neutral-800";
-    if (load > 70) return "bg-neutral-600";
-    return "bg-neutral-400";
-  };
 
   return (
     <section id="trening" className="py-20 lg:py-32 section-gradient">
@@ -219,13 +212,6 @@ function TrainingSection() {
                 <div className="text-2xl mb-2">{training.icon}</div>
                 <div className="text-xs text-neutral-600 mb-1">
                   {training.time} {training.distance && `• ${training.distance}`}
-                </div>
-                <div className="text-sm text-neutral-600 mb-2">Obciążenie {training.load}</div>
-                <div className="h-2 bg-neutral-200 rounded-full overflow-hidden">
-                  <div 
-                    className={`h-full rounded-full ${getLoadColor(training.load)}`}
-                    style={{ width: `${Math.min(training.load, 100)}%` }}
-                  />
                 </div>
                 <div className="text-xs text-neutral-900 mt-2">{training.name}</div>
               </div>

@@ -1,29 +1,53 @@
-# Create T3 App
+# Bartosz Grubka - Triathlon Coaching Website
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Personal website for Bartosz Grubka, professional triathlon coach and extreme triathlon athlete.
 
-## What's next? How do I make an app with this?
+## Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- Responsive design optimized for mobile and desktop
+- Hero section with video background
+- Training plans showcase
+- Biography and achievements
+- Competition results
+- Contact information
+- Social media integration (Strava, Instagram, Facebook, YouTube)
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Project Structure
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+```
+src/
+  app/
+    layout.tsx    # Root layout with metadata and fonts
+    page.tsx      # Homepage with all sections
+  styles/
+    globals.css   # Global styles and Tailwind
+public/
+  photos/         # Image assets
+  videos/         # Video assets
+```
 
-## Learn More
+## Getting Started
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+Install dependencies:
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+```bash
+pnpm install
+```
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+Run the development server:
 
-## How do I deploy this?
+```bash
+pnpm dev
+```
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## Available Scripts
+
+- `pnpm dev` - Start development server with Turbopack
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm preview` - Build and start production server
+- `pnpm typecheck` - Run TypeScript type checking
+- `pnpm format:check` - Check code formatting
+- `pnpm format:write` - Fix code formatting

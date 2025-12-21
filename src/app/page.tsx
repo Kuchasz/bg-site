@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 // Social Media Icons
 const StravaIcon = () => (
@@ -71,15 +72,27 @@ function Navigation() {
 
 // Hero Section
 function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log("Video autoplay failed:", error);
+      });
+    }
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-end justify-start pt-16 pb-20">
       {/* Background Video */}
       <div className="absolute inset-0">
         <video 
+          ref={videoRef}
           autoPlay 
           loop 
           muted 
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
           poster="/photos/diablak_movie_placeholder.jpg"
         >
@@ -532,6 +545,8 @@ function Footer() {
               <InstagramIcon />
             </Link>
             <Link href="https://www.facebook.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">
+"use client";
+
               <FacebookIcon />
             </Link>
             <Link href="https://www.youtube.com" target="_blank" className="text-neutral-600 hover:text-neutral-900 transition-colors">

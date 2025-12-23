@@ -1,4 +1,10 @@
 import Link from "next/link";
+import { Noto_Color_Emoji } from "next/font/google";
+
+const notoColorEmoji = Noto_Color_Emoji({
+  weight: "400",
+  subsets: ["emoji"],
+});
 
 // Social Media Icons
 const StravaIcon = () => (
@@ -88,7 +94,7 @@ function Navigation() {
               <FacebookIcon />
             </Link>
             <Link
-              href="https://www.youtube.com"
+              href="https://filmygorskie.pl/film/vod.544-droga-na-diablak"
               target="_blank"
               className="text-neutral-600 transition-colors hover:text-neutral-900"
             >
@@ -610,7 +616,9 @@ function ResultsSection() {
                 key={index}
                 className="flex items-center gap-3 rounded-lg px-4 py-2 transition-colors hover:bg-neutral-100"
               >
-                <span className="text-xl">{result.flag}</span>
+                <span className={`shrink-0 text-xl ${notoColorEmoji.className}`}>
+                  {result.flag}
+                </span>
                 <span className="flex-1 text-neutral-900">{result.event}</span>
                 {result.position && (
                   <span className="font-semibold text-neutral-700">
@@ -728,7 +736,7 @@ function ContactSection() {
                 <FacebookIcon />
               </Link>
               <Link
-                href="https://www.youtube.com"
+                href="https://filmygorskie.pl/film/vod.544-droga-na-diablak"
                 target="_blank"
                 className="rounded-lg bg-neutral-200 p-3 text-neutral-700 transition-colors hover:bg-neutral-300 hover:text-neutral-900"
               >
@@ -785,7 +793,7 @@ function Footer() {
               <FacebookIcon />
             </Link>
             <Link
-              href="https://www.youtube.com"
+              href="https://filmygorskie.pl/film/vod.544-droga-na-diablak"
               target="_blank"
               className="text-neutral-600 transition-colors hover:text-neutral-900"
             >

@@ -74,14 +74,14 @@ function Navigation() {
               <StravaIcon />
             </Link>
             <Link
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/lyda_grubsona/"
               target="_blank"
               className="text-neutral-600 transition-colors hover:text-neutral-900"
             >
               <InstagramIcon />
             </Link>
             <Link
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/bartosz.grubka"
               target="_blank"
               className="text-neutral-600 transition-colors hover:text-neutral-900"
             >
@@ -714,14 +714,14 @@ function ContactSection() {
                 <StravaIcon />
               </Link>
               <Link
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/lyda_grubsona/"
                 target="_blank"
                 className="rounded-lg bg-neutral-200 p-3 text-neutral-700 transition-colors hover:bg-neutral-300 hover:text-neutral-900"
               >
                 <InstagramIcon />
               </Link>
               <Link
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/bartosz.grubka"
                 target="_blank"
                 className="rounded-lg bg-neutral-200 p-3 text-neutral-700 transition-colors hover:bg-neutral-300 hover:text-neutral-900"
               >
@@ -771,14 +771,14 @@ function Footer() {
               <StravaIcon />
             </Link>
             <Link
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/lyda_grubsona/"
               target="_blank"
               className="text-neutral-600 transition-colors hover:text-neutral-900"
             >
               <InstagramIcon />
             </Link>
             <Link
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/bartosz.grubka"
               target="_blank"
               className="text-neutral-600 transition-colors hover:text-neutral-900"
             >

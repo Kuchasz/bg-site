@@ -411,12 +411,6 @@ function TrainingSection() {
                       {activity.time}{" "}
                       {activity.distance && `• ${activity.distance}`}
                     </div>
-                    <div className="mb-2 h-2 overflow-hidden rounded-full bg-neutral-200">
-                      <div
-                        className={`h-full ${activity.color}`}
-                        style={{ width: `${Math.min(activity.load, 100)}%` }}
-                      />
-                    </div>
                     <div className="text-xs font-medium text-neutral-900">
                       {activity.name}
                     </div>

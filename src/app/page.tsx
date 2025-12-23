@@ -171,111 +171,119 @@ function HeroSection() {
 
 // Training Section
 function TrainingSection() {
-  const trainingDays = [
-    {
-      day: "Pon",
-      icon: "🏊",
-      activities: [
-        {
-          time: "41m",
-          distance: "2.2 km",
-          load: 37,
-          name: "Basen - ćwiczenia",
-          color: "bg-teal-500",
-        },
-      ],
-    },
-    {
-      day: "Wt",
-      icon: "💪",
-      activities: [
-        {
-          time: "1h0m",
-          distance: "",
-          load: 60,
-          name: "Trening siłowy",
-          color: "bg-emerald-500",
-        },
-      ],
-    },
-    {
-      day: "Śr",
-      icon: "🏊",
-      activities: [
-        {
-          time: "56m",
-          distance: "3 km",
-          load: 54,
-          name: "Basen wytrzymałość",
-          color: "bg-teal-500",
-        },
-      ],
-    },
-    {
-      day: "Czw",
-      icon: "🏃",
-      activities: [
-        {
-          time: "1h8m",
-          distance: "14 km",
-          load: 81,
-          name: "Bieg Interwał",
-          color: "bg-yellow-500",
-        },
-      ],
-    },
-    {
-      day: "Pt",
-      icon: "💪",
-      activities: [
-        {
-          time: "1h0m",
-          distance: "",
-          load: 66,
-          name: "Wybieganie teren",
-          color: "bg-emerald-500",
-        },
-      ],
-    },
-    {
-      day: "Sob",
-      icon: "🚴",
-      activities: [
-        {
-          time: "1h30m",
-          distance: "",
-          load: 85,
-          name: "Rower / trenazer",
-          color: "bg-orange-500",
-        },
-      ],
-    },
-    {
-      day: "Ndz",
-      icon: "🏊",
-      activities: [
-        {
-          time: "56m",
-          distance: "3 km",
-          load: 54,
-          name: "Basen wytrzymałość",
-          color: "bg-teal-500",
-        },
-      ],
-    },
-    {
-      day: "Pon",
-      icon: "🚴",
-      activities: [
-        {
-          time: "3h30m",
-          distance: "",
-          load: 136,
-          name: "Rower szosa",
-          color: "bg-teal-600",
-        },
-      ],
-    },
+  const trainingWeek = [
+      {
+        day: "Pon",
+        date: "22 gru",
+        icon: "🏊",
+        activities: [
+          {
+            time: "45m",
+            distance: "2.4 km",
+            load: 43,
+            name: "Basen - ćwiczenia",
+            color: "bg-teal-500",
+          },
+        ],
+      },
+      {
+        day: "Wt",
+        date: "23 gru",
+        icon: "🏃",
+        activities: [
+          {
+            time: "1h0m",
+            distance: "",
+            load: 57,
+            name: "Trening siłowy",
+            color: "bg-yellow-500",
+          },
+          {
+            time: "56m",
+            distance: "12 km",
+            load: 57,
+            name: "Bieg Tempo",
+            color: "bg-yellow-500",
+          },
+        ],
+      },
+      {
+        day: "Śr",
+        date: "24 gru",
+        icon: "🚴",
+        activities: [
+          {
+            time: "56m",
+            distance: "3 km",
+            load: 54,
+            name: "Basen wytrzymałość",
+            color: "bg-teal-500",
+          },
+          {
+            time: "1h30m",
+            distance: "",
+            load: 85,
+            name: "Rower / trenazer",
+            color: "bg-orange-500",
+          },
+        ],
+      },
+      {
+        day: "Czw",
+        date: "25 gru",
+        icon: "🏃",
+        activities: [
+          {
+            time: "1h8m",
+            distance: "14 km",
+            load: 81,
+            name: "Bieg Interwał",
+            color: "bg-yellow-500",
+          },
+        ],
+      },
+      {
+        day: "Pt",
+        date: "26 gru",
+        icon: "🏃",
+        activities: [
+          {
+            time: "1h0m",
+            distance: "",
+            load: 0,
+            name: "Trening siłowy",
+            color: "bg-gray-300",
+          },
+        ],
+      },
+      {
+        day: "Sob",
+        date: "27 gru",
+        icon: "🚴",
+        activities: [
+          {
+            time: "1h30m",
+            distance: "",
+            load: 66,
+            name: "Wybieganie teren",
+            color: "bg-emerald-500",
+          },
+        ],
+      },
+      {
+        day: "Ndz",
+        date: "28 gru",
+        icon: "🚴",
+        activities: [
+          {
+            time: "3h30m",
+            distance: "",
+            load: 136,
+            name: "Rower szosa",
+            color: "bg-orange-500",
+          },
+        ],
+      },
   ];
 
   return (
@@ -304,8 +312,8 @@ function TrainingSection() {
           </div>
         </div>
 
-        <div className="mb-16 grid items-start gap-12 lg:grid-cols-2">
-          <div className="space-y-8">
+        <div className="mb-16">
+          <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-2">
             <div className="card rounded-xl p-8">
               <h3 className="mb-4 text-xl font-semibold text-neutral-900">
                 W zależności od Twoich potrzeb umawiamy się na:
@@ -362,23 +370,33 @@ function TrainingSection() {
                 </li>
               </ul>
             </div>
-
-            <p className="text-center text-3xl font-bold text-neutral-900">
-              Proste!
-            </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {trainingDays.map((day, index) => (
+          <p className="mt-8 text-center text-3xl font-bold text-neutral-900">
+            Proste!
+          </p>
+        </div>
+
+        <div>
+          <h3 className="mb-6 text-center text-2xl font-bold text-neutral-900">
+            Przykładowy plan treningowy
+          </h3>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
+            {trainingWeek.map((day, dayIndex) => (
               <div
-                key={index}
+                key={dayIndex}
                 className="card rounded-xl p-4 transition-shadow hover:shadow-lg"
               >
-                <div className="mb-3 flex items-center justify-between">
-                  <div className="text-xs font-semibold tracking-wide text-neutral-500 uppercase">
-                    {day.day}
+                <div className="mb-3 flex flex-col gap-1">
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs font-bold tracking-wide text-neutral-900 uppercase">
+                      {day.day}
+                    </div>
+                    <div className={`text-2xl ${notoColorEmoji.className}`}>
+                      {day.icon}
+                    </div>
                   </div>
-                  <div className="text-3xl">{day.icon}</div>
+                  <div className="text-xs text-neutral-500">{day.date}</div>
                 </div>
                 {day.activities.map((activity, actIndex) => (
                   <div
@@ -389,7 +407,7 @@ function TrainingSection() {
                         : ""
                     }
                   >
-                    <div className="mb-2 text-sm font-medium text-neutral-900">
+                    <div className="mb-2 text-xs font-medium text-neutral-900">
                       {activity.time}{" "}
                       {activity.distance && `• ${activity.distance}`}
                     </div>

@@ -40,17 +40,21 @@ function SeamlessVideo({
   poster,
   className,
   alt,
+  playbackRate = 1.0,
 }: {
   src: string;
   poster: string;
   className?: string;
   alt: string;
+  playbackRate?: number;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+
+    video.playbackRate = playbackRate;
 
     const handleTimeUpdate = () => {
       // Restart video slightly before it ends to avoid black frame
@@ -61,7 +65,7 @@ function SeamlessVideo({
 
     video.addEventListener("timeupdate", handleTimeUpdate);
     return () => video.removeEventListener("timeupdate", handleTimeUpdate);
-  }, []);
+  }, [playbackRate]);
 
   return (
     <video

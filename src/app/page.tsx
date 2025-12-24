@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { Noto_Color_Emoji } from "next/font/google";
+import { useEffect, useRef } from "react";
 
 const notoColorEmoji = Noto_Color_Emoji({
   weight: "400",
@@ -30,6 +33,52 @@ const YouTubeIcon = () => (
     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 );
+
+// Seamless looping video component
+function SeamlessVideo({
+  src,
+  poster,
+  className,
+  alt,
+}: {
+  src: string;
+  poster: string;
+  className?: string;
+  alt: string;
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleTimeUpdate = () => {
+      // Restart video slightly before it ends to avoid black frame
+      if (video.duration - video.currentTime < 0.5) {
+        video.currentTime = 0;
+      }
+    };
+
+    video.addEventListener("timeupdate", handleTimeUpdate);
+    return () => video.removeEventListener("timeupdate", handleTimeUpdate);
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      className={className}
+      poster={poster}
+    >
+      <source src={src} type="video/mp4" />
+      <img src={poster} alt={alt} className={className} />
+    </video>
+  );
+}
 
 // Navigation
 function Navigation() {
@@ -113,22 +162,12 @@ function HeroSection() {
     <section className="relative flex min-h-screen items-end justify-start pt-16 pb-20">
       {/* Background Video */}
       <div className="absolute inset-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="h-full w-full object-cover"
+        <SeamlessVideo
+          src="/videos/bartek_main.mp4"
           poster="/photos/diablak_movie_placeholder.jpg"
-        >
-          <source src="/videos/hero_vid.mp4" type="video/mp4" />
-          {/* Fallback image */}
-          <img
-            src="/photos/diablak_movie_placeholder.jpg"
-            alt="Diablak extreme triathlon"
-            className="h-full w-full object-cover"
-          />
-        </video>
+          className="h-full w-full object-cover"
+          alt="Diablak extreme triathlon"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent" />
       </div>
@@ -468,10 +507,11 @@ function AboutSection() {
 
           <div className="relative">
             <div className="aspect-[4/3] overflow-hidden rounded-xl">
-              <img
-                src="/photos/image_o_mnie.jpg"
-                alt="Bartosz Grubka cycling"
+              <SeamlessVideo
+                src="/videos/bartek_section_2.mp4"
+                poster="/photos/bartek_section_2.jpg"
                 className="h-full w-full object-cover grayscale"
+                alt="Bartosz Grubka cycling"
               />
             </div>
           </div>
@@ -654,10 +694,11 @@ function ResultsSection() {
 
           <div className="relative">
             <div className="aspect-[4/3] overflow-hidden rounded-xl">
-              <img
-                src="/photos/image_wyniki.jpg"
-                alt="Bartosz Grubka race results celebration"
+              <SeamlessVideo
+                src="/videos/bartek_section_3.mp4"
+                poster="/photos/bartek_section_3.jpg"
                 className="h-full w-full object-cover grayscale"
+                alt="Bartosz Grubka race results celebration"
               />
             </div>
           </div>
@@ -759,10 +800,11 @@ function ContactSection() {
 
           <div className="relative">
             <div className="aspect-[4/3] overflow-hidden rounded-xl">
-              <img
-                src="/photos/image_kontakt.jpeg"
-                alt="Bartosz Grubka triathlon"
+              <SeamlessVideo
+                src="/videos/bartek_section_1.mp4"
+                poster="/photos/bartek_section_1.jpg"
                 className="h-full w-full object-cover grayscale"
+                alt="Bartosz Grubka triathlon"
               />
             </div>
           </div>

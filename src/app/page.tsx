@@ -514,7 +514,7 @@ function AboutSection() {
               <SeamlessVideo
                 src="/videos/bartek_section_2.mp4"
                 poster="/photos/bartek_section_2.jpg"
-                className="h-full w-full object-cover grayscale"
+                className="h-full w-full object-cover"
                 alt="Bartosz Grubka cycling"
               />
             </div>
@@ -701,7 +701,7 @@ function ResultsSection() {
               <SeamlessVideo
                 src="/videos/bartek_section_3.mp4"
                 poster="/photos/bartek_section_3.jpg"
-                className="h-full w-full object-cover grayscale"
+                className="h-full w-full object-cover"
                 alt="Bartosz Grubka race results celebration"
               />
             </div>
@@ -807,7 +807,7 @@ function ContactSection() {
               <SeamlessVideo
                 src="/videos/bartek_section_1.mp4"
                 poster="/photos/bartek_section_1.jpg"
-                className="h-full w-full object-cover grayscale"
+                className="h-full w-full object-cover"
                 alt="Bartosz Grubka triathlon"
               />
             </div>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Noto_Color_Emoji } from "next/font/google";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const notoColorEmoji = Noto_Color_Emoji({
   weight: "400",
@@ -162,21 +162,45 @@ function Navigation() {
 
 // Hero Section
 function HeroSection() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Calculate parallax offset (slower movement for background)
+  const parallaxOffset = scrollY * 0.5;
+
   return (
-    <section className="relative flex min-h-screen items-end justify-start pt-16 pb-20">
-      {/* Background Video */}
-      <div className="absolute inset-0">
+    <section className="relative flex min-h-screen items-end justify-start pt-16 pb-20 overflow-hidden">
+      {/* Background Video with Parallax */}
+      <div
+        className="absolute inset-0 will-change-transform"
+        style={{
+          transform: `translateY(${parallaxOffset}px)`,
+        }}
+      >
         <SeamlessVideo
           src="/videos/bartek_main.mp4"
           poster="/photos/diablak_movie_placeholder.jpg"
-          className="h-full w-full object-cover"
+          className="h-[120vh] w-full object-cover"
           alt="Diablak extreme triathlon"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div
+        className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
+        style={{
+          transform: `translateY(${-parallaxOffset * 0.2}px)`,
+        }}
+      >
         <div className="max-w-4xl">
           <h1 className="mb-8 text-5xl leading-[0.9] font-black tracking-tight uppercase sm:text-6xl lg:text-8xl">
             <span className="block text-white">Trenuj mądrze</span>

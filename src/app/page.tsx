@@ -241,7 +241,6 @@ function TrainingSection() {
   const trainingWeek = [
       {
         day: "Pon",
-        date: "22 gru",
         icon: "🏊",
         activities: [
           {
@@ -255,7 +254,6 @@ function TrainingSection() {
       },
       {
         day: "Wt",
-        date: "23 gru",
         icon: "🏃",
         activities: [
           {
@@ -276,7 +274,6 @@ function TrainingSection() {
       },
       {
         day: "Śr",
-        date: "24 gru",
         icon: "🚴",
         activities: [
           {
@@ -297,7 +294,6 @@ function TrainingSection() {
       },
       {
         day: "Czw",
-        date: "25 gru",
         icon: "🏃",
         activities: [
           {
@@ -311,7 +307,6 @@ function TrainingSection() {
       },
       {
         day: "Pt",
-        date: "26 gru",
         icon: "🏃",
         activities: [
           {
@@ -325,7 +320,6 @@ function TrainingSection() {
       },
       {
         day: "Sob",
-        date: "27 gru",
         icon: "🚴",
         activities: [
           {
@@ -339,7 +333,6 @@ function TrainingSection() {
       },
       {
         day: "Ndz",
-        date: "28 gru",
         icon: "🚴",
         activities: [
           {
@@ -454,16 +447,13 @@ function TrainingSection() {
                 key={dayIndex}
                 className="card rounded-xl p-4 transition-shadow hover:shadow-lg"
               >
-                <div className="mb-3 flex flex-col gap-1">
-                  <div className="flex items-center justify-between">
-                    <div className="text-xs font-bold tracking-wide text-neutral-900 uppercase">
-                      {day.day}
-                    </div>
-                    <div className={`text-2xl ${notoColorEmoji.className}`}>
-                      {day.icon}
-                    </div>
+                <div className="mb-3 flex items-center justify-between">
+                  <div className="text-xs font-bold tracking-wide text-neutral-900 uppercase">
+                    {day.day}
                   </div>
-                  <div className="text-xs text-neutral-500">{day.date}</div>
+                  <div className={`text-2xl ${notoColorEmoji.className}`}>
+                    {day.icon}
+                  </div>
                 </div>
                 {day.activities.map((activity, actIndex) => (
                   <div

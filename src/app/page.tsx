@@ -720,19 +720,19 @@ function ContactSection() {
                 <p className="text-neutral-600">
                   E-mail:{" "}
                   <a
-                    href="mailto:john.doe@gmail.com"
+                    href="mailto:bartosz.grubka@gmail.com"
                     className="text-neutral-900 transition-colors hover:text-neutral-700"
                   >
-                    john.doe@gmail.com
+                    bartosz.grubka@gmail.com
                   </a>
                 </p>
                 <p className="text-neutral-600">
                   Tel.{" "}
                   <a
-                    href="tel:+48666777888"
+                    href="tel:+48694839753"
                     className="text-neutral-900 transition-colors hover:text-neutral-700"
                   >
-                    666-777-888
+                    694-839-753
                   </a>
                 </p>
               </div>

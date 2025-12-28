@@ -15,26 +15,14 @@ body {
 
 .hero-gradient {
   @apply bg-gradient-to-br from-neutral-50 via-neutral-100 to-neutral-200;
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
 }
 
 .section-gradient {
   @apply bg-gradient-to-b from-neutral-100 to-neutral-50;
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
 }
 
 .section-dotted {
   @apply bg-white;
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
 }
 
 .text-gradient {

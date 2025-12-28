@@ -696,7 +696,7 @@ function ResultsSection() {
               </div>
             ))}
 
-            <div className="mt-8 border-t border-neutral-200 pt-8">
+            <div className="mt-8 flex justify-center border-t border-neutral-200 pt-8 lg:justify-start">
               <Link
                 href="https://www.strava.com/athletes/17131294"
                 target="_blank"

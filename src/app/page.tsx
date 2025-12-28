@@ -347,10 +347,10 @@ function TrainingSection() {
   ];
 
   return (
-    <section id="trening" className="section-gradient py-20 lg:py-32">
+    <section id="trening" className="section-gradient py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <h2 className="mb-6 text-4xl font-bold sm:text-5xl">
+          <h2 className="mb-16 text-4xl font-bold sm:text-5xl">
             <span className="text-gradient">Trening</span>
           </h2>
           <div className="card mx-auto max-w-2xl rounded-xl p-8">
@@ -482,7 +482,7 @@ function TrainingSection() {
 // About Section
 function AboutSection() {
   return (
-    <section id="o-mnie" className="section-dotted py-20 lg:py-32">
+    <section id="o-mnie" className="section-dotted py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-4xl font-bold sm:text-5xl">
@@ -667,7 +667,7 @@ function ResultsSection() {
   ];
 
   return (
-    <section id="wyniki" className="section-gradient py-20 lg:py-32">
+    <section id="wyniki" className="section-gradient py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-4xl font-bold sm:text-5xl">
@@ -735,7 +735,7 @@ function ResultsSection() {
 // Contact Section
 function ContactSection() {
   return (
-    <section id="kontakt" className="section-dotted py-20 lg:py-32">
+    <section id="kontakt" className="section-dotted py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-4xl font-bold sm:text-5xl">

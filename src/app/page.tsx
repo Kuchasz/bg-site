@@ -177,7 +177,7 @@ function HeroSection() {
   const parallaxOffset = scrollY * 0.5;
 
   return (
-    <section className="relative flex min-h-screen items-end justify-start pt-16 pb-20 overflow-hidden">
+    <section className="relative flex min-h-screen items-end justify-start overflow-hidden pt-16 pb-20">
       {/* Background Video with Parallax */}
       <div
         className="absolute inset-0 will-change-transform"
@@ -239,111 +239,111 @@ function HeroSection() {
 // Training Section
 function TrainingSection() {
   const trainingWeek = [
-      {
-        day: "Pon",
-        icon: "🏊",
-        activities: [
-          {
-            time: "45m",
-            distance: "2.4 km",
-            load: 43,
-            name: "Basen - ćwiczenia",
-            color: "bg-teal-500",
-          },
-        ],
-      },
-      {
-        day: "Wt",
-        icon: "🏃",
-        activities: [
-          {
-            time: "1h0m",
-            distance: "",
-            load: 57,
-            name: "Trening siłowy",
-            color: "bg-yellow-500",
-          },
-          {
-            time: "56m",
-            distance: "12 km",
-            load: 57,
-            name: "Bieg Tempo",
-            color: "bg-yellow-500",
-          },
-        ],
-      },
-      {
-        day: "Śr",
-        icon: "🚴",
-        activities: [
-          {
-            time: "56m",
-            distance: "3 km",
-            load: 54,
-            name: "Basen wytrzymałość",
-            color: "bg-teal-500",
-          },
-          {
-            time: "1h30m",
-            distance: "",
-            load: 85,
-            name: "Rower / trenazer",
-            color: "bg-orange-500",
-          },
-        ],
-      },
-      {
-        day: "Czw",
-        icon: "🏃",
-        activities: [
-          {
-            time: "1h8m",
-            distance: "14 km",
-            load: 81,
-            name: "Bieg Interwał",
-            color: "bg-yellow-500",
-          },
-        ],
-      },
-      {
-        day: "Pt",
-        icon: "🏃",
-        activities: [
-          {
-            time: "1h0m",
-            distance: "",
-            load: 0,
-            name: "Trening siłowy",
-            color: "bg-gray-300",
-          },
-        ],
-      },
-      {
-        day: "Sob",
-        icon: "🚴",
-        activities: [
-          {
-            time: "1h30m",
-            distance: "",
-            load: 66,
-            name: "Wybieganie teren",
-            color: "bg-emerald-500",
-          },
-        ],
-      },
-      {
-        day: "Ndz",
-        icon: "🚴",
-        activities: [
-          {
-            time: "3h30m",
-            distance: "",
-            load: 136,
-            name: "Rower szosa",
-            color: "bg-orange-500",
-          },
-        ],
-      },
+    {
+      day: "Pon",
+      activities: [
+        {
+          time: "45m",
+          distance: "2.4 km",
+          name: "Basen - ćwiczenia",
+          color: "bg-teal-500",
+          icon: "🏊",
+        },
+      ],
+    },
+    {
+      day: "Wt",
+      activities: [
+        {
+          time: "1h0m",
+          distance: "",
+          name: "Trening siłowy",
+          color: "bg-yellow-500",
+          icon: "💪",
+        },
+        {
+          time: "56m",
+          distance: "12 km",
+          name: "Bieg Tempo",
+          color: "bg-yellow-500",
+          icon: "🏃",
+        },
+      ],
+    },
+    {
+      day: "Śr",
+      activities: [
+        {
+          time: "56m",
+          distance: "3 km",
+          name: "Basen wytrzymałość",
+          color: "bg-teal-500",
+          icon: "🏊",
+        },
+        {
+          time: "1h30m",
+          distance: "",
+          name: "Rower / trenazer",
+          color: "bg-orange-500",
+          icon: "🚴",
+        },
+      ],
+    },
+    {
+      day: "Czw",
+      activities: [
+        {
+          time: "1h8m",
+          distance: "14 km",
+          name: "Bieg Interwał",
+          color: "bg-yellow-500",
+          icon: "🏃",
+        },
+      ],
+    },
+    {
+      day: "Pt",
+      activities: [
+        {
+          time: "1h0m",
+          distance: "",
+          name: "Trening siłowy",
+          color: "bg-gray-300",
+          icon: "💪",
+        },
+      ],
+    },
+    {
+      day: "Sob",
+      activities: [
+        {
+          time: "1h30m",
+          distance: "",
+          name: "Wybieganie teren",
+          color: "bg-emerald-500",
+          icon: "🏃",
+        },
+        {
+          time: "56m",
+          distance: "3 km",
+          name: "Basen wytrzymałość",
+          color: "bg-teal-500",
+          icon: "🏊",
+        },
+      ],
+    },
+    {
+      day: "Ndz",
+      activities: [
+        {
+          time: "3h30m",
+          distance: "",
+          name: "Rower szosa",
+          color: "bg-orange-500",
+          icon: "🚴",
+        },
+      ],
+    },
   ];
 
   return (
@@ -355,7 +355,7 @@ function TrainingSection() {
           </h2>
           <div className="card mx-auto max-w-2xl rounded-xl p-8">
             <p className="mb-4 text-2xl font-bold text-neutral-900">
-              Dostajesz: plan treningowy na:
+              Dostajesz plan treningowy na:
             </p>
             <div className="flex flex-col items-center justify-center gap-4 text-xl font-semibold sm:flex-row">
               <span className="cursor-pointer rounded-lg border-2 border-neutral-900 px-6 py-2 text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white">
@@ -447,13 +447,8 @@ function TrainingSection() {
                 key={dayIndex}
                 className="card rounded-xl p-4 transition-shadow hover:shadow-lg"
               >
-                <div className="mb-3 flex items-center justify-between">
-                  <div className="text-xs font-bold tracking-wide text-neutral-900 uppercase">
-                    {day.day}
-                  </div>
-                  <div className={`text-2xl ${notoColorEmoji.className}`}>
-                    {day.icon}
-                  </div>
+                <div className="mb-3 text-xs font-bold tracking-wide text-neutral-900 uppercase">
+                  {day.day}
                 </div>
                 {day.activities.map((activity, actIndex) => (
                   <div
@@ -464,9 +459,14 @@ function TrainingSection() {
                         : ""
                     }
                   >
-                    <div className="mb-2 text-xs font-medium text-neutral-900">
-                      {activity.time}{" "}
-                      {activity.distance && `• ${activity.distance}`}
+                    <div className="mb-2 flex items-center justify-between">
+                      <div className="text-xs font-medium text-neutral-900">
+                        {activity.time}{" "}
+                        {activity.distance && `• ${activity.distance}`}
+                      </div>
+                      <div className={`text-lg ${notoColorEmoji.className}`}>
+                        {activity.icon}
+                      </div>
                     </div>
                     <div className="text-xs font-medium text-neutral-900">
                       {activity.name}
@@ -686,7 +686,9 @@ function ResultsSection() {
                 key={index}
                 className="flex items-center gap-3 rounded-lg px-4 py-2 transition-colors hover:bg-neutral-100"
               >
-                <span className={`shrink-0 text-xl ${notoColorEmoji.className}`}>
+                <span
+                  className={`shrink-0 text-xl ${notoColorEmoji.className}`}
+                >
                   {result.flag}
                 </span>
                 <span className="flex-1 text-neutral-900">{result.event}</span>

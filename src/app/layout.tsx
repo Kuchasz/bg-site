@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
 
 import { type Metadata } from "next";
-import { Funnel_Display } from "next/font/google";
+import { Funnel_Display, Noto_Color_Emoji } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Bartosz Grubka – opieka trenerska",
@@ -14,11 +14,17 @@ const funnelDisplay = Funnel_Display({
   variable: "--font-funnel-display",
 });
 
+const notoColorEmoji = Noto_Color_Emoji({
+  weight: "400",
+  subsets: ["emoji"],
+  variable: "--font-noto-emoji",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pl" className={`${funnelDisplay.variable} scroll-smooth`}>
+    <html lang="pl" className={`${funnelDisplay.variable} ${notoColorEmoji.variable} scroll-smooth`}>
       <body className="font-sans antialiased" style={{ fontFamily: 'var(--font-funnel-display)' }}>{children}</body>
     </html>
   );

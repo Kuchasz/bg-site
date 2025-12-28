@@ -1,13 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Noto_Color_Emoji } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
-
-const notoColorEmoji = Noto_Color_Emoji({
-  weight: "400",
-  subsets: ["emoji"],
-});
 
 // Social Media Icons
 const StravaIcon = () => (
@@ -461,7 +455,7 @@ function TrainingSection() {
                         {activity.time}{" "}
                         {activity.distance && `• ${activity.distance}`}
                       </div>
-                      <div className={`text-lg ${notoColorEmoji.className}`}>
+                      <div className="text-lg">
                         {activity.icon}
                       </div>
                     </div>
@@ -682,9 +676,7 @@ function ResultsSection() {
                 key={index}
                 className="flex items-center gap-3 rounded-lg px-4 py-2 transition-colors hover:bg-neutral-100"
               >
-                <span
-                  className={`shrink-0 text-xl ${notoColorEmoji.className}`}
-                >
+                <span className="shrink-0 text-xl">
                   {result.flag}
                 </span>
                 <span className="flex-1 text-neutral-900">{result.event}</span>

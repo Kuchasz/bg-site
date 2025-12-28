@@ -401,31 +401,28 @@ function TrainingSection() {
               <ul className="space-y-3 text-neutral-600">
                 <li className="flex items-start gap-3">
                   <span className="mt-1 text-neutral-900">•</span>
-                  <span>uwzględnia Twoje doświadczenie</span>
+                  <span>plan treningowy jest spersonalizowany</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 text-neutral-900">•</span>
                   <span>
-                    oparty jest na tym do czego się przygotowujesz, lub nad czym
-                    chcesz pracować
+                    uwzględnia Twoje doświadczenie, predyspozycje oraz cele sportowe
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 text-neutral-900">•</span>
                   <span>
-                    masz personalny dostęp do Twojego planu treningowego
+                    rozwija obszary, nad którymi chcesz pracować
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 text-neutral-900">•</span>
-                  <span>widzisz co masz zaplanowane wraz z komentarzem</span>
+                  <span>widzisz zaplanowane treningi wraz z komentarzem i wskazówkami</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 text-neutral-900">•</span>
                   <span>
-                    Ja widzę co zrobiłeś/aś (możesz również komentować swoje
-                    odczucia po) i na tej podstawie mogę reagować na Twój dalszy
-                    rozwój.
+                    możesz dzielić się swoimi odczuciami po wykonanym treningu — ja widzę, jak go wykonałaś/-eś i na tej podstawie mogę odpowiednio reagować na Twój dalszy rozwój
                   </span>
                 </li>
               </ul>

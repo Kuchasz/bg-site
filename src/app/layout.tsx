@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { Funnel_Display } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Bartosz Grubka - Trener Triathlonu",
+  title: "Bartosz Grubka – opieka trenerska",
   description: "Trenuj mądrze i po cichu, a efekty niech robią hałas. Plany treningowe dla kolarstwa, biegania i triathlonu.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };

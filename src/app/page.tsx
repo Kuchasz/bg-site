@@ -522,10 +522,9 @@ function AboutSection() {
 
           <div className="relative">
             <div className="aspect-[4/3] overflow-hidden rounded-xl">
-              <SeamlessVideo
-                src="/videos/bartek_section_2.mp4"
-                poster="/photos/bartek_section_2.jpg"
-                className="h-full w-full object-cover"
+              <img
+                src="/photos/image_o_mnie.jpg"
+                className="h-full w-full object-cover grayscale"
                 alt="Bartosz Grubka cycling"
               />
             </div>
@@ -709,14 +708,22 @@ function ResultsSection() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-[4/3] overflow-hidden rounded-xl">
-              <SeamlessVideo
-                src="/videos/bartek_section_3.mp4"
-                poster="/photos/bartek_section_3.jpg"
-                className="h-full w-full object-cover"
-                alt="Bartosz Grubka race results celebration"
-              />
+          <div className="relative hidden lg:block">
+            <div className="space-y-4">
+              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+                <img
+                  src="/photos/image_wyniki_1.jpg"
+                  className="h-full w-full object-cover grayscale"
+                  alt="Bartosz Grubka race results"
+                />
+              </div>
+              <div className="aspect-[4/3] overflow-hidden rounded-xl">
+                <img
+                  src="/photos/image_wyniki_2.jpg"
+                  className="h-full w-full object-cover grayscale"
+                  alt="Bartosz Grubka race celebration"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -817,10 +824,9 @@ function ContactSection() {
 
           <div className="relative">
             <div className="aspect-[4/3] overflow-hidden rounded-xl">
-              <SeamlessVideo
-                src="/videos/bartek_section_1.mp4"
-                poster="/photos/bartek_section_1.jpg"
-                className="h-full w-full object-cover"
+              <img
+                src="/photos/image_kontakt.jpeg"
+                className="h-full w-full object-cover grayscale"
                 alt="Bartosz Grubka triathlon"
               />
             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 // Social Media Icons
 const StravaIcon = () => (
@@ -28,55 +28,6 @@ const YouTubeIcon = () => (
   </svg>
 );
 
-// Seamless looping video component
-function SeamlessVideo({
-  src,
-  poster,
-  className,
-  alt,
-  playbackRate = 1.0,
-}: {
-  src: string;
-  poster: string;
-  className?: string;
-  alt: string;
-  playbackRate?: number;
-}) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    video.playbackRate = playbackRate;
-
-    const handleTimeUpdate = () => {
-      // Restart video slightly before it ends to avoid black frame
-      if (video.duration - video.currentTime < 0.5) {
-        video.currentTime = 0;
-      }
-    };
-
-    video.addEventListener("timeupdate", handleTimeUpdate);
-    return () => video.removeEventListener("timeupdate", handleTimeUpdate);
-  }, [playbackRate]);
-
-  return (
-    <video
-      ref={videoRef}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-      className={className}
-      poster={poster}
-    >
-      <source src={src} type="video/mp4" />
-      <img src={poster} alt={alt} className={className} />
-    </video>
-  );
-}
 
 // Navigation
 function Navigation() {
@@ -179,12 +130,17 @@ function HeroSection() {
           transform: `translateY(${parallaxOffset}px)`,
         }}
       >
-        <SeamlessVideo
-          src="/videos/bartek_main.mp4"
-          poster="/photos/diablak_movie_placeholder.jpg"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
           className="h-[120vh] w-full object-cover"
-          alt="Diablak extreme triathlon"
-        />
+          poster="/photos/diablak_movie_placeholder.jpg"
+        >
+          <source src="/videos/bartek_main.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent" />
       </div>

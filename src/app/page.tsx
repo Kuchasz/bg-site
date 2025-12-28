@@ -28,7 +28,6 @@ const YouTubeIcon = () => (
   </svg>
 );
 
-
 // Navigation
 function Navigation() {
   return (
@@ -303,27 +302,45 @@ function TrainingSection() {
           <h2 className="mb-16 text-4xl font-bold sm:text-5xl">
             <span className="text-gradient">Trening</span>
           </h2>
-          <div className="card mx-auto max-w-2xl rounded-xl p-8">
-            <p className="mb-4 text-2xl font-bold text-neutral-900">
-              Dostajesz plan treningowy na:
-            </p>
-            <div className="flex flex-col items-center justify-center gap-4 text-xl font-semibold sm:flex-row">
-              <span className="cursor-pointer rounded-lg border-2 border-neutral-900 px-6 py-2 text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white">
-                14 dni
-              </span>
-              <span className="font-normal text-neutral-600">lub</span>
-              <span className="cursor-pointer rounded-lg border-2 border-neutral-900 px-6 py-2 text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white">
-                miesiąc
-              </span>
-            </div>
-            <p className="mt-4 text-xl font-light text-neutral-600 italic">
-              ...Ty wybierasz
-            </p>
-          </div>
         </div>
 
         <div className="mb-16">
           <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-2">
+            <div className="card rounded-xl p-8">
+              <ul className="space-y-3 text-neutral-600">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 text-neutral-900">•</span>
+                  <span>plan treningowy jest spersonalizowany</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 text-neutral-900">•</span>
+                  <span>
+                    uwzględnia Twoje doświadczenie, predyspozycje oraz cele
+                    sportowe
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 text-neutral-900">•</span>
+                  <span>rozwija obszary, nad którymi chcesz pracować</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 text-neutral-900">•</span>
+                  <span>
+                    widzisz zaplanowane treningi wraz z komentarzem i
+                    wskazówkami
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 text-neutral-900">•</span>
+                  <span>
+                    możesz dzielić się swoimi odczuciami po wykonanym treningu —
+                    ja widzę, jak go wykonałaś/-eś i na tej podstawie mogę
+                    odpowiednio reagować na Twój dalszy rozwój
+                  </span>
+                </li>
+              </ul>
+            </div>
+
             <div className="card rounded-xl p-8">
               <h3 className="mb-4 text-xl font-semibold text-neutral-900">
                 W zależności od Twoich potrzeb umawiamy się na:
@@ -342,40 +359,18 @@ function TrainingSection() {
                   plan treningowy i jego monitorowanie
                 </li>
               </ul>
-            </div>
-
-            <div className="card rounded-xl p-8">
-              <h3 className="mb-4 text-xl font-semibold text-neutral-900">
-                Plan:
+              <h3 className="mt-8 mb-4 text-xl font-semibold text-neutral-900">
+                Dostajesz plan treningowy na:
               </h3>
               <ul className="space-y-3 text-neutral-600">
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-neutral-900">•</span>
-                  <span>plan treningowy jest spersonalizowany</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-neutral-900">•</span>
-                  <span>
-                    uwzględnia Twoje doświadczenie, predyspozycje oraz cele sportowe
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-neutral-900">•</span>
-                  <span>
-                    rozwija obszary, nad którymi chcesz pracować
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-neutral-900">•</span>
-                  <span>widzisz zaplanowane treningi wraz z komentarzem i wskazówkami</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 text-neutral-900">•</span>
-                  <span>
-                    możesz dzielić się swoimi odczuciami po wykonanym treningu — ja widzę, jak go wykonałaś/-eś i na tej podstawie mogę odpowiednio reagować na Twój dalszy rozwój
-                  </span>
+                <li className="flex items-center gap-3">
+                  <span className="text-neutral-900">•</span>
+                  14 dni lub miesiąc
                 </li>
               </ul>
+              <p className="mt-4 text-xl font-light text-neutral-600 italic">
+                ...Ty wybierasz
+              </p>
             </div>
           </div>
 
@@ -411,9 +406,7 @@ function TrainingSection() {
                         {activity.time}{" "}
                         {activity.distance && `• ${activity.distance}`}
                       </div>
-                      <div className="text-lg">
-                        {activity.icon}
-                      </div>
+                      <div className="text-lg">{activity.icon}</div>
                     </div>
                     <div className="text-xs font-medium text-neutral-900">
                       {activity.name}
@@ -632,9 +625,7 @@ function ResultsSection() {
                 key={index}
                 className="flex items-center gap-3 rounded-lg px-4 py-2 transition-colors hover:bg-neutral-100"
               >
-                <span className="shrink-0 text-xl">
-                  {result.flag}
-                </span>
+                <span className="shrink-0 text-xl">{result.flag}</span>
                 <span className="flex-1 text-neutral-900">{result.event}</span>
                 {result.position && (
                   <span className="font-semibold text-neutral-700">
